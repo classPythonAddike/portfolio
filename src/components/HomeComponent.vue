@@ -1,19 +1,28 @@
 <template>
   
   <div class="HomePage">
-    <img :src="img_src" class="profile">
+    
+    <div class="img_div">
+      <img :src="img_src" class="profile">
+    </div>
+    
+    <div class="Heading">
+      <h2 class="HomePageHeading">
+        Hi there! I'm class PythonAddict
+      </h2>
+    </div>
 
-    <h2 class="HomePageHeading">
-      Hi there! I'm class PythonAddict
-    </h2>
-
-    <p class="desc">
-      A student programmer passionate about Desktop App Development, and API’s
-    </p>
-  
-    <button class="redirectbutton" id="about" @click="goTo('/')">About Me</button>
-    <button class="redirectbutton" id="project">My Projects</button>
-    <button class="redirectbutton" id="contact">Contact Me</button>
+    <div class="desc_div">
+      <p class="desc">
+        A student programmer passionate about Desktop App Development, and API’s
+      </p>
+    </div>
+    
+    <div class="buttons_div">
+      <button class="redirectbutton" id="about" @click="goTo('/')">About Me</button>
+      <button class="redirectbutton" id="project">My Projects</button>
+      <button class="redirectbutton" id="contact">Contact Me</button>
+    </div>
 
   </div>
 
@@ -48,49 +57,61 @@ export default {
 <style>
 
 .desc {
-  position: relative;
   font-size: 20px;
   font-family: Cabin, Consolas, "Times New Roman";
   font-weight: 400;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 div .HomePage {
   align-contents: center;
-  position: relative;
-  top: 20px;
-  height: 100%;
-  line-height: 150%;
+  margin-bottom: 16%;
 }
 
 .HomePageHeading {
   font-family: Cabin, Consolas, "Times New Roman";
   font-weight: 400;
-  margin: 0 auto;
+}
+
+.img_div {
   display: flex;
   justify-content: center;
+  padding-top: 7%;
+}
+
+.Heading {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  padding-bottom: 0;
+}
+
+.buttons_div {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
 }
 
 .profile {
   height: 15%;
   border-radius: 50%;
   border: 5px solid #000000;
-  position: relative;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
 }
 
 body {
   background-image: url("../assets/background-img.svg");
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
 }
 
 .redirectbutton {
   padding: 1% 5%;
+  margin: 20px;
   font-family: Cabin, Consolas, "Times New Roman";
   font-weight: 400;
   background: rgba(0, 0, 0, 0.8);
@@ -99,28 +120,13 @@ body {
   color: #ffffff;
   outline: none;
   cursor: pointer;
-  position: relative;
+
   transition: all 200ms;
 }
 
 .redirectbutton:hover {
   transform: scale(1.2, 1.2);
   transition: all 200ms;
-}
-
-#about {
-  left: 10%;
-  right: 90%;
-}
-
-#project {
-  left: 20%;
-  right: 80%;
-}
-
-#contact {
-  left: 30%;
-  right: 70%;
 }
 
 </style>

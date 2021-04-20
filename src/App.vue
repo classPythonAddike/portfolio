@@ -50,12 +50,13 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 
 #nav {
   width: 100%;
   height: 10%;
   background-color: #141414;
+  position: fixed;
 }
 
 #nav ul {
@@ -73,7 +74,7 @@ export default {
   font-size: 18px;
   color: #ffffff;
   text-align: center;
-  padding: 20px 16px;
+  padding: 22.5px 16px;
   text-decoration: none;
 }
 
@@ -102,6 +103,25 @@ export default {
 #nav li .right-align:hover {
   background-color: #ffffff;
   color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #141414;
+  border-radius: 1px;
+  background: #141414
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #353535; 
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
 }
 
 </style>
