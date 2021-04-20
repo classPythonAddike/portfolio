@@ -56,7 +56,6 @@ export default {
   width: 100%;
   height: 10%;
   background-color: #141414;
-  position: fixed;
 }
 
 #nav ul {

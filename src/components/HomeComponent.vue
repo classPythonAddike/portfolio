@@ -79,7 +79,7 @@ div .HomePage {
 .img_div {
   display: flex;
   justify-content: center;
-  padding-top: 7%;
+  padding-top: 11%;
 }
 
 .Heading {
