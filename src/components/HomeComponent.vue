@@ -19,8 +19,12 @@
     </div>
     
     <div class="buttons_div">
-      <button class="redirectbutton" id="about" @click="goTo('/')">About Me</button>
-      <button class="redirectbutton" id="project">My Projects</button>
+      <button class="redirectbutton" id="about" @click="scrollToSection('aboutdesc', 30)">
+        About Me
+      </button>
+      <button class="redirectbutton" id="project" @click="scrollToSection('projectdesc', 0)">
+        My Projects
+      </button>
       <button class="redirectbutton" id="contact">Contact Me</button>
     </div>
 
@@ -39,15 +43,16 @@ export default {
     }
   },
   methods: {
-    goTo(route) {
-      this.$router.push(route)
-      console.log("Pushed!")
-    },
     modifyImg(number) {
       let image = "https://randomuser.me/api/portraits/men/" + 
          number.toString() +
         ".jpg";
       return image
+    },
+      scrollToSection(id, num) {
+        this.$router.push("/")
+        let el = document.getElementById(id)
+        window.scrollTo({top: el.getBoundingClientRect().top - num, behavior: 'smooth'})
     }
   }
 }

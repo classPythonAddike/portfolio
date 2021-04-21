@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="aboutdesc">
     <div class="about">
       <h2 class="aboutdesc">About Me</h2>
       <p class="aboutdesc">
@@ -36,7 +36,10 @@
 <script>
 
 export default {
-  name: 'AboutComponent'
+  name: 'AboutComponent',
+  mounted() {
+    //console.log(this.$refs)
+  }
 }
 
 </script>
