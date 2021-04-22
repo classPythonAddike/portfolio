@@ -11,7 +11,7 @@
       
       <br><br>
       
-      <strong>Python</strong> - Python was the first language I actively learned, and my favourite by far. I use for just about everything - developing gui’s with PyQt5 and Tkinter, writing web apps with Flask and Quart, writing interpreters and transpilers, programming challenges, simple games, etc.
+      <strong>Python</strong> - Python was the first language I actively learned, and my favourite by far. I use it for just about everything - developing gui’s with PyQt5 and Tkinter, writing web apps with Flask and Quart, writing interpreters and transpilers, programming challenges, simple games, etc.
       
       <br><br>
       
@@ -23,7 +23,7 @@
       
       <br><br>
      
-      <strong>Vue.js</strong> - I learn Vue.js to help me write large web applications, uptill then I’d only used plain ol’ Javascript and Html. Its the framework I use regardless of my project requirements or size, as I find very intuitive and easy to use!
+      <strong>Javascript</strong> - I learnt Javascript early on, but only started to use it once I learnt Vue.js. I used it write large web applications, uptill then I’d only used plain ol’ Javascript and Html. Vue.js is the framework I use regardless of my project requirements or size, as I find very intuitive and easy to use!
       
       <br><br>
 
@@ -60,7 +60,7 @@ export default {
   width: 85%;
   border-radius: 10px;
   padding: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 </style>

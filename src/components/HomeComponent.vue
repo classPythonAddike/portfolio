@@ -73,7 +73,7 @@ export default {
 
 div .HomePage {
   align-contents: center;
-  margin-bottom: 16%;
+  margin-bottom: 8%;
 }
 
 .HomePageHeading {
@@ -118,6 +118,7 @@ body {
   padding: 1% 5%;
   margin: 20px;
   font-family: Cabin, Consolas, "Times New Roman";
+  font-size: 15px;
   font-weight: 400;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 8px;

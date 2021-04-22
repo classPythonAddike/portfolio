@@ -2,9 +2,9 @@
   <div id="nav">
     <ul> 
       <li>
-        <router-link to="/" class="right-align">
+        <a href="https://www.github.com/classPythonAddike" class="right-align">
           Contact
-        </router-link>
+        </a>
       </li>
       
       <li>
@@ -18,10 +18,10 @@
           About
         </router-link>
       </li>
-      
+
       <li>
-        <router-link to="/" class="right-align" id="homenav">
-          Home
+        <router-link to="/blog" class="right-align">
+          Blog
         </router-link>
       </li>
 
