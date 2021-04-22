@@ -8,13 +8,13 @@
       </li>
       
       <li>
-        <router-link to="/" class="right-align" @click="scrollToSection('projectdesc', 0)">
+        <router-link to="/" class="right-align" @click="scrollToSection('projectdesc', 0)" v-if="width>420">
           Projects
         </router-link>
       </li>
       
       <li>
-        <router-link to="/" class="right-align" @click="scrollToSection('aboutdesc', 30)">
+        <router-link to="/" class="right-align" @click="scrollToSection('aboutdesc', 30)" v-if="width>420">
           About
         </router-link>
       </li>
@@ -25,6 +25,12 @@
         </router-link>
       </li>
 
+      <li>
+        <router-link to="/" class="right-align" v-if="width<=420">
+          Home
+        </router-link>
+      </li>
+      
       <li>
         <router-link to="/" class="left-align" v-if="width>590">
           <img :src="image" class="nav-img">
@@ -65,9 +71,12 @@ export default {
       return image
     },
     scrollToSection(id, num) {
-      this.$router.push("/")
-      let el = document.getElementById(id)
-      window.scrollTo({top: el.getBoundingClientRect().top - num, behavior: 'smooth'})
+      if (window.location.pathname != '/'){
+        this.$router.push("/")
+      } else {
+        let el = document.getElementById(id)
+        window.scrollTo({top: el.getBoundingClientRect().top - num, behavior: 'smooth'})  
+      }
     },
     changeWidth(e) {
       this.width = window.innerWidth
@@ -171,7 +180,7 @@ export default {
   #nav li .left-align {
     padding: 5px, 4px;
     font-size: 14px;
-    margin-left: 4px;
+    margin-left: 8px;
     margin-top: 4px;
   }
 }

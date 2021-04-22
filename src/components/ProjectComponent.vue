@@ -51,4 +51,10 @@ h2 {
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (max-width: 590px) {
+  .h2container {
+    font-size: 19px;
+  }
+}
+
 </style>

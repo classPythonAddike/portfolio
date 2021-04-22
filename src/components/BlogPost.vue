@@ -60,4 +60,16 @@ p {
   width: 100%;
 }
 
+@media screen and (max-width: 590px) {
+  
+  h2 {
+    font-size: 19px;
+  }
+
+  .blogredirect {
+    font-size: 15px;
+  }
+
+}
+
 </style>

@@ -2,7 +2,7 @@
 
   <h2>My Blog</h2>
 
-  <BlogPost title="Hello, World!" post="/blog" v-if="size>0">
+  <BlogPost title="Why Go With Go?" post="/blog/whygo" v-if="size>0">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
     </p>
@@ -27,7 +27,7 @@
   </BlogPost> 
 
   <div class="buttoncontainer">
-    <button class="incrbutton" @click="increase()">
+    <button class="incrbutton" @click="increase()" v-if="size < length">
       Show More
     </button>
   </div>
@@ -99,6 +99,19 @@ h2 {
 .buttoncontainer {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 590px) {
+  h2 {
+    font-size: 25px;
+  }
+
+  .buttoncontainer button {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 </style>

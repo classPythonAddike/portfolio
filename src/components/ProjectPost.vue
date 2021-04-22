@@ -56,4 +56,14 @@ a {
   color: black;
 }
 
+@media screen and (max-width: 590px) {
+  .card {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+}
+
 </style>

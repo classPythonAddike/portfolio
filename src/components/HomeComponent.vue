@@ -25,7 +25,9 @@
       <button class="redirectbutton" id="project" @click="scrollToSection('projectdesc', 0)">
         My Projects
       </button>
-      <button class="redirectbutton" id="contact">Contact Me</button>
+      <a href="https://www.github.com/classPythonAddike" class="redirectbutton" id="contact">
+        Contact Me
+      </a>
     </div>
 
   </div>
@@ -79,6 +81,8 @@ div .HomePage {
 .HomePageHeading {
   font-family: Cabin, Consolas, "Times New Roman";
   font-weight: 400;
+  width: 100%;
+  text-align: center;
 }
 
 .img_div {
@@ -126,13 +130,27 @@ body {
   color: #ffffff;
   outline: none;
   cursor: pointer;
-
+  text-decoration: none;
   transition: all 200ms;
 }
 
 .redirectbutton:hover {
   transform: scale(1.2, 1.2);
   transition: all 200ms;
+}
+
+@media screen and (max-width: 590px) {
+  .redirectbutton {
+    font-size: 12px;
+  }
+
+  .HomePageHeading {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
 }
 
 </style>

@@ -63,4 +63,19 @@ export default {
   margin-bottom: 60px;
 }
 
+@media screen and (max-width: 590px) {
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .about {
+    margin-bottom: 20px;
+  }
+}
+
 </style>

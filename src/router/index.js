@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import BlogPage from '../views/BlogPage.vue'
+import WhyGo from '../views/BlogPosts/WhyGo.vue'
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     name: 'BlogPage',
     component: BlogPage
   },
+  {
+    path: '/blog/whygo',
+    name: 'WhyGo',
+    component: WhyGo
+  }
 ]
 
 const router = createRouter({
