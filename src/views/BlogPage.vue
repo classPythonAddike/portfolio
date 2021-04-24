@@ -8,19 +8,19 @@
     </p>
   </BlogPost>
 
-  <BlogPost title="Goodbye World" post="/" v-if="size>1">
+  <BlogPost title="Goodbye World" post="/blog/whygo" v-if="size>1">
     <p>
        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
     </p>
   </BlogPost>
 
-  <BlogPost title="Hello, Earth!" post="/blog" v-if="size>2">
+  <BlogPost title="Hello, Earth!" post="/blog/whygo" v-if="size>2">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
     </p>
   </BlogPost>
 
-  <BlogPost title="Goodbye, Earth!" post="/" v-if="size>3">
+  <BlogPost title="Goodbye, Earth!" post="/blog/whygo" v-if="size>3">
     <p>
        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
     </p>
@@ -92,7 +92,9 @@ h2 {
 }
 
 .incrbutton:hover {
-  transform: scale(1.2, 1.2);
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   transition: all 200ms;
 }
 

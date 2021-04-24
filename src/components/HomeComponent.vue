@@ -1,9 +1,10 @@
 <template>
   
   <div class="HomePage">
-    
+   
+    <p v-if="show" class="tooltip">Image obtained from randomuser.me</p>
     <div class="img_div">
-      <img :src="img_src" class="profile">
+      <img :src="img_src" class="profile" @mouseover="show = true" @mouseleave="show = false">
     </div>
     
     <div class="Heading">
@@ -41,7 +42,8 @@ export default {
 
   data() {
     return {
-      img_src: this.modifyImg(this.$parent.$parent.$parent.$data.image_number)
+      img_src: this.modifyImg(this.$parent.$parent.$parent.$data.image_number),
+      show: false,
     }
   },
   methods: {
@@ -62,6 +64,25 @@ export default {
 </script>
 
 <style>
+
+.tooltip {
+  width: auto;
+  margin-left: 50%;
+  margin-top: 7%;
+  transform: translate(-50%, -50%);
+  height: min-content;
+  background-color: #000000;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 6px;
+  position: absolute;
+  font-family: Cabin, Consolas, "Times New Roman";
+  font-size: 15px;
+}
 
 .desc {
   font-size: 20px;
@@ -135,7 +156,9 @@ body {
 }
 
 .redirectbutton:hover {
-  transform: scale(1.2, 1.2);
+  background: #eeeeee;
+  border: 1px solid #eeeeee;
+  color: #000000;
   transition: all 200ms;
 }
 

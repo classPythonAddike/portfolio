@@ -2,7 +2,16 @@
   
   <div class="container">
     <a :href="redirect" class="card">
-      <h2>{{ title }}</h2>
+      <div class="place">
+        
+        <h2 class="item">{{ title }}</h2>
+        
+        <div class="ig"><img src="..\assets\star.png"></div>
+        <p class="it">
+          {{ stars }}
+        </p>
+
+      </div>
       <slot>lorem ipsum</slot>
     </a>
   </div>
@@ -16,12 +25,54 @@ export default {
   props: {
     'title': String,
     'redirect': String,
+    'reponame': String,
+  },
+  data() {
+    return {
+      url: "https://api.github.com/repos/" + this.reponame,
+      stars: 0
     }
+  },
+  mounted() {
+    fetch(this.url).then(
+        data => {
+          return data.json()
+        }
+    ).then(
+      result => {
+       this.stars = result.stargazers_count
+      }
+    )
+  }
 }
 
 </script>
 
 <style scoped>
+
+.place {
+  display: flex;
+}
+
+.ig {
+  width: 100%;
+}
+
+img {
+  float: right;
+  width: 24px;
+  height: 24px;
+  padding-top: 15px;
+  padding-right: 5px;
+}
+
+p {
+  float: right;
+}
+
+.item {
+  width: 200%;
+}
 
 .container {
   width: 100%;
@@ -63,6 +114,10 @@ a {
 
   h2 {
     font-size: 19px;
+  }
+
+  img {
+    padding-top: 14px;
   }
 }
 

@@ -58,7 +58,7 @@ export default {
   font-size: 18px;
   background-color: white;
   width: 85%;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 30px;
   margin-bottom: 60px;
 }
