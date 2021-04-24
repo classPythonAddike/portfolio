@@ -121,6 +121,7 @@ export default {
   text-align: center;
   padding: 22.5px 16px;
   text-decoration: none;
+  transition: all 250ms;
 }
 
 #nav li .nav-img {
@@ -131,8 +132,7 @@ export default {
   margin: 10px;
   border-radius: 50%;
   border: 3px solid #141414;
-  /*border: 3-x solid #898989;*/
-  height: 36px
+  height: 36px;
 }
 
 #nav li .left-align {
@@ -148,6 +148,7 @@ export default {
 #nav li .right-align:hover {
   background-color: #ffffff;
   color: #000000;
+  transition: all 250ms;
 }
 
 ::-webkit-scrollbar {
