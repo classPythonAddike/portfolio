@@ -1,16 +1,17 @@
 <template>
-  
   <div class="HomePage">
-   
     <p v-if="show" class="tooltip">Image obtained from randomuser.me</p>
     <div class="img_div">
-      <img :src="img_src" class="profile" @mouseover="show = true" @mouseleave="show = false">
+      <img
+        :src="img_src"
+        class="profile"
+        @mouseover="show = true"
+        @mouseleave="show = false"
+      />
     </div>
-    
+
     <div class="Heading">
-      <h2 class="HomePageHeading">
-        Hi there! I'm class PythonAddict
-      </h2>
+      <h2 class="HomePageHeading">Hi there! I'm class PythonAddict</h2>
     </div>
 
     <div class="desc_div">
@@ -18,53 +19,62 @@
         A student programmer passionate about Desktop App Development, and API’s
       </p>
     </div>
-    
+
     <div class="buttons_div">
-      <button class="redirectbutton" id="about" @click="scrollToSection('aboutdesc', 30)">
+      <button
+        class="redirectbutton"
+        id="about"
+        @click="scrollToSection('aboutdesc', 30)"
+      >
         About Me
       </button>
-      <button class="redirectbutton" id="project" @click="scrollToSection('projectdesc', 0)">
+      <button
+        class="redirectbutton"
+        id="project"
+        @click="scrollToSection('projectdesc', 0)"
+      >
         My Projects
       </button>
-      <a href="https://www.github.com/classPythonAddike" class="redirectbutton" id="contact">
+      <a
+        href="https://www.github.com/classPythonAddike"
+        class="redirectbutton"
+        id="contact"
+      >
         Contact Me
       </a>
     </div>
-
   </div>
-
 </template>
 
 <script>
-
 export default {
-  name: 'HomeComponent',
+  name: "HomeComponent",
 
   data() {
     return {
       img_src: this.modifyImg(this.$parent.$parent.$parent.$data.image_number),
       show: false,
-    }
+    };
   },
   methods: {
     modifyImg(number) {
-      let image = "https://randomuser.me/api/portraits/men/" + 
-         number.toString() +
-        ".jpg";
-      return image
+      let image =
+        "https://randomuser.me/api/portraits/men/" + number.toString() + ".jpg";
+      return image;
     },
-      scrollToSection(id, num) {
-        this.$router.push("/")
-        let el = document.getElementById(id)
-        window.scrollTo({top: el.getBoundingClientRect().top - num, behavior: 'smooth'})
-    }
-  }
-}
-
+    scrollToSection(id, num) {
+      this.$router.push("/");
+      let el = document.getElementById(id);
+      window.scrollTo({
+        top: el.getBoundingClientRect().top - num,
+        behavior: "smooth",
+      });
+    },
+  },
+};
 </script>
 
 <style>
-
 .tooltip {
   width: auto;
   margin-left: 50%;
@@ -95,7 +105,7 @@ export default {
 }
 
 div .HomePage {
-  align-contents: center;
+  align-content: center;
   margin-bottom: 8%;
 }
 
@@ -159,7 +169,8 @@ body {
   background: #eeeeee;
   border: 1px solid #eeeeee;
   color: #000000;
-  transition: all 200ms;
+  transition: background 200ms;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 590px) {
@@ -175,5 +186,4 @@ body {
     font-size: 16px;
   }
 }
-
 </style>

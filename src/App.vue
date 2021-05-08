@@ -54,6 +54,8 @@
   </div>
 
   <router-view />
+
+					<footer>© Copyright {{ new Date().getFullYear() }} Class PythonAddict</footer>
 </template>
 
 <script>
@@ -103,6 +105,21 @@ export default {
 <style>
 * {
   outline: none;
+}
+
+footer {
+  width: 90%;
+  padding-bottom: 10px;
+  padding-left: 20px;
+	padding-top: 20px;
+  justify-content: center;
+	text-align: center;
+  font-family: Cabin, Consolas, "Times New Roman";
+  font-size: 18px;
+}
+
+#app {
+  margin-bottom: 0;
 }
 
 #nav {
@@ -174,7 +191,7 @@ export default {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #000000;
+  background: #999999;
 }
 
 @media screen and (max-width: 590px) {
