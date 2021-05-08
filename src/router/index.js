@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import BlogPage from '../views/BlogPage.vue'
-import WhyGo from '../views/BlogPosts/WhyGo.vue'
+import WhyVim from '../views/BlogPosts/WhyVim.vue'
 
 const routes = [
   {
@@ -15,9 +15,9 @@ const routes = [
     component: BlogPage
   },
   {
-    path: '/blog/whygo',
-    name: 'WhyGo',
-    component: WhyGo
+    path: '/blog/whyvim',
+    name: 'WhyVim',
+    component: WhyVim
   }
 ]
 

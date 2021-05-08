@@ -1,48 +1,55 @@
 <template>
   <div id="nav">
-    <ul> 
+    <ul>
       <li>
         <a href="https://www.github.com/classPythonAddike" class="right-align">
           Contact
         </a>
       </li>
-      
+
       <li>
-        <router-link to="/" class="right-align" @click="scrollToSection('projectdesc', 0)" v-if="width>420">
+        <router-link
+          to="/"
+          class="right-align"
+          @click="scrollToSection('projectdesc', 0)"
+          v-if="width > 420"
+        >
           Projects
         </router-link>
       </li>
-      
+
       <li>
-        <router-link to="/" class="right-align" @click="scrollToSection('aboutdesc', 30)" v-if="width>420">
+        <router-link
+          to="/"
+          class="right-align"
+          @click="scrollToSection('aboutdesc', 30)"
+          v-if="width > 420"
+        >
           About
         </router-link>
       </li>
 
       <li>
-        <router-link to="/blog" class="right-align">
-          Blog
-        </router-link>
+        <router-link to="/blog" class="right-align"> Blog </router-link>
       </li>
 
       <li>
-        <router-link to="/" class="right-align" v-if="width<=420">
+        <router-link to="/" class="right-align" v-if="width <= 420">
           Home
         </router-link>
       </li>
-      
+
       <li>
-        <router-link to="/" class="left-align" v-if="width>590">
-          <img :src="image" class="nav-img">
+        <router-link to="/" class="left-align" v-if="width > 590">
+          <img :src="image" class="nav-img" />
         </router-link>
       </li>
 
       <li>
-        <router-link to="/" class="left-align" v-if="width>420">
-          <br>class PythonAddict
+        <router-link to="/" class="left-align" v-if="width > 420">
+          <br />class PythonAddict
         </router-link>
       </li>
-
     </ul>
   </div>
 
@@ -51,49 +58,49 @@
 
 <script>
 export default {
-
   data() {
     return {
       image: null,
       image_number: null,
-      width: 0
-    }
+      width: 0,
+    };
   },
 
   methods: {
     getImg() {
-      let num = Math.floor(Math.random() * 100)
+      let num = Math.floor(Math.random() * 100);
       let image =
         "https://randomuser.me/api/portraits/med/men/" +
         num.toString() +
-        ".jpg"
-      this.image_number = num.toString()
-      return image
+        ".jpg";
+      this.image_number = num.toString();
+      return image;
     },
     scrollToSection(id, num) {
-      if (window.location.pathname != '/'){
-        this.$router.push("/")
+      if (window.location.pathname != "/") {
+        this.$router.push("/");
       } else {
-        let el = document.getElementById(id)
-        window.scrollTo({top: el.getBoundingClientRect().top - num, behavior: 'smooth'})  
+        let el = document.getElementById(id);
+        window.scrollTo({
+          top: el.getBoundingClientRect().top - num,
+          behavior: "smooth",
+        });
       }
     },
-    changeWidth(e) {
-      this.width = window.innerWidth
-    }
+    changeWidth(_) {
+      this.width = window.innerWidth;
+    },
   },
 
   mounted() {
-    this.image = this.getImg()
-    this.width = window.innerWidth
-    window.addEventListener("resize", this.changeWidth)
-  }
+    this.image = this.getImg();
+    this.width = window.innerWidth;
+    window.addEventListener("resize", this.changeWidth);
+  },
 };
-
 </script>
 
 <style>
-
 * {
   outline: none;
 }
@@ -158,19 +165,17 @@ export default {
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px #141414;
   border-radius: 1px;
-  background: #141414
+  background: #141414;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: #353535; 
+  background: #353535;
   border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #000000; 
+  background: #000000;
 }
-
-
 
 @media screen and (max-width: 590px) {
   #nav li .right-align {
@@ -193,5 +198,4 @@ export default {
     flex-direction: row-reverse;
   }
 }
-
 </style>

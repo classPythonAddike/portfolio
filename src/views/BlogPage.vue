@@ -2,25 +2,25 @@
 
   <h2>My Blog</h2>
 
-  <BlogPost title="Why Go With Go?" post="/blog/whygo" v-if="size>0">
+  <BlogPost title="Why Go With Go?" post="/blog/whyvim" v-if="size>0">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
     </p>
   </BlogPost>
 
-  <BlogPost title="Goodbye World" post="/blog/whygo" v-if="size>1">
+  <BlogPost title="Goodbye World" post="/blog/whyvim" v-if="size>1">
     <p>
        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
     </p>
   </BlogPost>
 
-  <BlogPost title="Hello, Earth!" post="/blog/whygo" v-if="size>2">
+  <BlogPost title="Hello, Earth!" post="/blog/whyvim" v-if="size>2">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
     </p>
   </BlogPost>
 
-  <BlogPost title="Goodbye, Earth!" post="/blog/whygo" v-if="size>3">
+  <BlogPost title="Goodbye, Earth!" post="/blog/whyvim" v-if="size>3">
     <p>
        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
     </p>
