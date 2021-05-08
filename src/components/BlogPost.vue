@@ -1,29 +1,24 @@
 <template>
-  
   <div class="blogcontainer">
     <router-link :to="post" class="blogredirect">
-      <h2> {{ title }} </h2>
+      <h2>{{ title }}</h2>
       <slot>lorem ipsum</slot>
-      <p> View Full Post </p>
+      <p>View Full Post</p>
     </router-link>
   </div>
-
 </template>
 
 <script>
-
 export default {
-  name: 'BlogPost',
+  name: "BlogPost",
   props: {
     title: String,
     post: String,
-  }
-}
-
+  },
+};
 </script>
 
 <style scoped>
-
 .blogcontainer {
   width: 100%;
   display: flex;
@@ -55,13 +50,13 @@ export default {
 }
 
 p {
-  color: #319ce4;
+  color: #11aaf1;
   text-align: center;
   width: 100%;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 590px) {
-  
   h2 {
     font-size: 19px;
   }
@@ -69,7 +64,5 @@ p {
   .blogredirect {
     font-size: 15px;
   }
-
 }
-
 </style>

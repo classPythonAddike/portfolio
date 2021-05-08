@@ -8,6 +8,10 @@
       </li>
 
       <li>
+        <router-link to="/blog" class="right-align"> Blog </router-link>
+      </li>
+
+      <li>
         <router-link
           to="/"
           class="right-align"
@@ -27,10 +31,6 @@
         >
           About
         </router-link>
-      </li>
-
-      <li>
-        <router-link to="/blog" class="right-align"> Blog </router-link>
       </li>
 
       <li>
@@ -55,7 +55,7 @@
 
   <router-view />
 
-					<footer>© Copyright {{ new Date().getFullYear() }} Class PythonAddict</footer>
+  <footer>© Copyright {{ new Date().getFullYear() }} Class PythonAddict</footer>
 </template>
 
 <script>
@@ -108,12 +108,11 @@ export default {
 }
 
 footer {
-  width: 90%;
-  padding-bottom: 10px;
-  padding-left: 20px;
-	padding-top: 20px;
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 20px;
   justify-content: center;
-	text-align: center;
+  text-align: center;
   font-family: Cabin, Consolas, "Times New Roman";
   font-size: 18px;
 }

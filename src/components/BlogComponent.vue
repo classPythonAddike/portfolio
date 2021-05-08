@@ -1,29 +1,22 @@
 <template>
-
   <div class="container" id="aboutdesc">
     <div class="about">
       <h2 class="aboutdesc">{{ title }}</h2>
-      <slot class="aboutdesc">
-     </slot>
+      <slot class="aboutdesc"> </slot>
     </div>
   </div>
-
-
 </template>
 
 <script>
-
 export default {
-  name: 'BlogComponent',
+  name: "BlogComponent",
   props: {
-    title: String
-  }
-}
-
+    title: String,
+  },
+};
 </script>
 
 <style scoped>
-
 .container {
   display: flex;
   width: 100%;
@@ -39,7 +32,7 @@ export default {
   width: 85%;
   border-radius: 5px;
   padding: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 h2 {
@@ -56,5 +49,4 @@ h2 {
     font-size: 15px;
   }
 }
-
 </style>

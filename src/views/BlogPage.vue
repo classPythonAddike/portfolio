@@ -1,45 +1,46 @@
 <template>
-
   <h2>My Blog</h2>
 
-  <BlogPost title="Why Go With Go?" post="/blog/whyvim" v-if="size>0">
+  <BlogPost title="Why Go With Go?" post="/blog/whyvim" v-if="size > 0">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit
+      quis mauris ac imperdiet. Aenean eget turpis id . . .
     </p>
   </BlogPost>
 
-  <BlogPost title="Goodbye World" post="/blog/whyvim" v-if="size>1">
+  <BlogPost title="Goodbye World" post="/blog/whyvim" v-if="size > 1">
     <p>
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit
+      quis mauris ac imperdiet. Aenean eget turpis id . . .
     </p>
   </BlogPost>
 
-  <BlogPost title="Hello, Earth!" post="/blog/whyvim" v-if="size>2">
+  <BlogPost title="Hello, Earth!" post="/blog/whyvim" v-if="size > 2">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit
+      quis mauris ac imperdiet. Aenean eget turpis id . . .
     </p>
   </BlogPost>
 
-  <BlogPost title="Goodbye, Earth!" post="/blog/whyvim" v-if="size>3">
+  <BlogPost title="Goodbye, Earth!" post="/blog/whyvim" v-if="size > 3">
     <p>
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit quis mauris ac imperdiet. Aenean eget turpis id  . . .
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit
+      quis mauris ac imperdiet. Aenean eget turpis id . . .
     </p>
-  </BlogPost> 
+  </BlogPost>
 
   <div class="buttoncontainer">
     <button class="incrbutton" @click="increase()" v-if="size < length">
       Show More
     </button>
   </div>
-
 </template>
 
 <script>
-
-import BlogPost from '@/components/BlogPost.vue'
+import BlogPost from "@/components/BlogPost.vue";
 
 export default {
-  name: 'BlogPage',
+  name: "BlogPage",
   components: {
     BlogPost,
   },
@@ -47,24 +48,21 @@ export default {
     return {
       size: 3,
       length: 4,
-    }
+    };
   },
   methods: {
     increase() {
       if (this.size <= this.length - 3) {
         this.size += 3;
+      } else if (this.size <= this.length) {
+        this.size = this.length;
       }
-      else if (this.size <= this.length) {
-        this.size = this.length
-      }
-    }
-  }
-}
-
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 h2 {
   font-family: Cabin, Consolas, "Times New Roman";
   font-size: 38px;
@@ -88,14 +86,15 @@ h2 {
   outline: none;
   cursor: pointer;
 
-  transition: all 200ms;
+  transition: background 200ms;
 }
 
 .incrbutton:hover {
   color: #000000;
   background: #ffffff;
   border: 1px solid #ffffff;
-  transition: all 200ms;
+	transition: background 200ms;
+  font-weight: 600;
 }
 
 .buttoncontainer {
@@ -115,5 +114,4 @@ h2 {
     padding-bottom: 10px;
   }
 }
-
 </style>
