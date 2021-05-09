@@ -81,11 +81,21 @@ export default {
       if (this.i < this.fullheading.length) {
         this.heading += this.fullheading.charAt(this.i);
         this.i++;
-        setTimeout(this.typetext, Math.random() * 100 + 20);
+        let wait = Math.random() * 100 + 50;
+				let chr = this.fullheading.charAt(this.i - 1);
+        if (chr == '!' || chr == ',') {
+          wait += 500;
+        }
+        setTimeout(this.typetext, wait);
       } else if (this.k < this.fulltext.length) {
         this.text += this.fulltext.charAt(this.k);
         this.k++;
-        setTimeout(this.typetext, Math.random() * 100 + 20);
+        let wait = Math.random() * 100 + 50;
+				let chr = this.fulltext.charAt(this.k - 1);
+        if (chr == '!' || chr == ',') {
+          wait += 500;
+        }
+        setTimeout(this.typetext, wait);
       }
     },
   },
