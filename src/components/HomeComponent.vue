@@ -11,12 +11,12 @@
     </div>
 
     <div class="Heading">
-      <h2 class="HomePageHeading">Hi there! I'm class PythonAddict</h2>
+      <h2 class="HomePageHeading">{{ heading }}</h2>
     </div>
 
     <div class="desc_div">
       <p class="desc">
-        A student programmer passionate about Desktop App Development, and API’s
+        {{ text }}
       </p>
     </div>
 
@@ -54,6 +54,13 @@ export default {
     return {
       img_src: this.modifyImg(this.$parent.$parent.$parent.$data.image_number),
       show: false,
+      fullheading: "Hi there! I'm class PythonAddict!",
+      heading: "",
+      i: 0,
+      fulltext:
+        "A student programmer passionate about Desktop App Development, and API’s!",
+      text: "",
+      k: 0,
     };
   },
   methods: {
@@ -70,6 +77,22 @@ export default {
         behavior: "smooth",
       });
     },
+    typetext() {
+      if (this.i < this.fullheading.length) {
+        this.heading += this.fullheading.charAt(this.i);
+        this.i++;
+        setTimeout(this.typetext, Math.random() * 100 + 20);
+      } else if (this.k < this.fulltext.length) {
+        this.text += this.fulltext.charAt(this.k);
+        this.k++;
+        setTimeout(this.typetext, Math.random() * 100 + 20);
+      }
+    },
+  },
+
+  mounted() {
+    console.log("mounted!");
+    this.typetext();
   },
 };
 </script>
